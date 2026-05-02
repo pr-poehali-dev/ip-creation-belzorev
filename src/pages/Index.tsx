@@ -136,15 +136,33 @@ const Index = () => {
       `}</style>
 
       <div className="animate-fade-in w-full max-w-[820px]">
-        {/* Print button */}
-        <div className="print-hide text-center mb-4">
+        {/* Buttons */}
+        <div className="print-hide flex justify-center gap-3 mb-4">
           <button
             onClick={() => window.print()}
-            className="font-['Montserrat'] text-xs font-500 tracking-widest uppercase px-6 py-2 border border-[#b8943c] text-[#b8943c] hover:bg-[#b8943c] hover:text-white transition-all duration-300"
+            className="font-['Montserrat'] text-xs tracking-widest uppercase px-6 py-2 border border-[#b8943c] text-[#b8943c] hover:bg-[#b8943c] hover:text-white transition-all duration-300"
             style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.2em' }}
           >
             Распечатать
           </button>
+          <button
+            onClick={() => {
+              const style = document.createElement('style');
+              style.innerHTML = `@media print { .print-hide { display: none !important; } body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }`;
+              document.head.appendChild(style);
+              window.print();
+              document.head.removeChild(style);
+            }}
+            className="font-['Montserrat'] text-xs tracking-widest uppercase px-6 py-2 bg-[#b8943c] text-white hover:bg-[#8b6914] transition-all duration-300"
+            style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '0.2em' }}
+          >
+            Сохранить в PDF
+          </button>
+        </div>
+        <div className="print-hide text-center mb-2">
+          <p style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '10px', color: '#b8943c', letterSpacing: '0.1em' }}>
+            При сохранении в PDF — выберите «Сохранить как PDF» в настройках печати
+          </p>
         </div>
 
         {/* Certificate */}
@@ -210,7 +228,7 @@ const Index = () => {
 
               <div className="gold-ornament-line mb-5" />
 
-              <h1 className="text-4xl font-bold mb-1 gold-title tracking-wide" style={{ fontFamily: 'Cormorant Garamond', lineHeight: 1.1 }}>
+              <h1 className="text-5xl font-bold mb-1 gold-title" style={{ fontFamily: 'Cormorant Garamond', lineHeight: 1.15, letterSpacing: '0.12em', fontSize: 'clamp(28px, 5vw, 48px)' }}>
                 СВИДЕТЕЛЬСТВО
               </h1>
               <p className="text-[13px] tracking-[0.25em] uppercase text-[#8b6914] mb-1" style={{ fontFamily: 'Montserrat', fontWeight: 500 }}>
