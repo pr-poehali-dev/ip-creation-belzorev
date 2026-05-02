@@ -237,7 +237,7 @@ const Index = () => {
               <div className="text-center mb-8 py-4 border-y border-[rgba(184,142,60,0.3)]" style={{ background: 'linear-gradient(90deg, transparent, rgba(184,142,60,0.04), transparent)' }}>
                 <p className="field-label mb-2">Фамилия, Имя, Отчество</p>
                 <p className="text-3xl font-bold text-[#1a1206]" style={{ fontFamily: 'Cormorant Garamond', letterSpacing: '0.05em' }}>
-                  Петров Александр Николаевич
+                  Белозеров Максим Валерьевич
                 </p>
               </div>
 
@@ -251,7 +251,7 @@ const Index = () => {
                   <p className="field-value">771234567890</p>
 
                   <p className="field-label">Дата рождения</p>
-                  <p className="field-value">15 марта 1985 года</p>
+                  <p className="field-value">07 сентября 2001 года</p>
                 </div>
 
                 <div>
@@ -259,23 +259,23 @@ const Index = () => {
                   <p className="field-value">Серия 77 № 0489201</p>
 
                   <p className="field-label">Дата государственной регистрации</p>
-                  <p className="field-value">12 января 2020 года</p>
+                  <p className="field-value">02 мая 2026 года</p>
 
                   <p className="field-label">Регистрирующий орган</p>
-                  <p className="field-value">ИФНС России № 24 по г. Москве</p>
+                  <p className="field-value">УФНС России по г. Екатеринбургу</p>
                 </div>
               </div>
 
               {/* Address */}
               <div className="mb-6">
                 <p className="field-label">Место жительства</p>
-                <p className="field-value">г. Москва, ул. Тверская, д. 18, кв. 47</p>
+                <p className="field-value">г. Екатеринбург, ул. Юмашева, д. 15, кв. 121</p>
               </div>
 
               {/* Kod ОКВЭД */}
               <div className="mb-6">
                 <p className="field-label">Основной вид экономической деятельности (ОКВЭД)</p>
-                <p className="field-value">62.01 — Разработка компьютерного программного обеспечения</p>
+                <p className="field-value">47.91 — Торговля розничная по почте или по информационно-коммуникационной сети Интернет</p>
               </div>
 
               <div className="gold-ornament-line mb-6" />
@@ -331,7 +331,7 @@ const Index = () => {
                   <div className="mt-4">
                     <p className="field-label mb-1">Дата выдачи</p>
                     <p className="text-[15px] font-semibold text-[#1a1206]" style={{ fontFamily: 'Cormorant Garamond' }}>
-                      12 января 2020 года
+                      02 мая 2026 года
                     </p>
                   </div>
                 </div>
